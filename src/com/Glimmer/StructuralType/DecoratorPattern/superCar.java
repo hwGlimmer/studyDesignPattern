@@ -19,7 +19,4 @@ public class superCar implements ICar{
 		super();
 		this.car = car;
 	}
-
-	
-
 }
