@@ -15,7 +15,7 @@ package com.Glimmer.BuildType.PrototypePattern;
  */
 public class Test {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		ShapeCached.Load();
 		
 		Shape shape = ShapeCached.getShape(1);

@@ -11,11 +11,12 @@ public class ShapeCached {
 	// 维护注册数据
 	public static HashMap<Integer, Shape> shapMap = new HashMap<Integer, Shape>();
 	
-	// 提供方法获取实例
-	public static Shape getShape(int id) {
-		// 提供正确的方法获取实例
+	// 提供一个获取新实例的方法
+	public static Shape getShape(int id) throws CloneNotSupportedException {
+		// 提供一个找出正确实例原型的方法
 		Shape shape = shapMap.get(id);
-		return shape;
+		// 委托复制实例的方法生成新实例。
+		return (Shape) shape.clone();
 	}
 	
 	public static void Load() {
